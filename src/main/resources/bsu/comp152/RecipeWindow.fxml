@@ -17,10 +17,11 @@
                   </Label>
                   <MenuButton mnemonicParsing="false" text="Recipe Types:">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Casserole" />
+                      <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Casserole" />
                       <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Burger" />
                         <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Vegetable" />
                         <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Cake" />
+                        <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Cookie" />
                     </items>
                   </MenuButton>
                   <Button mnemonicParsing="false" onAction="#loadData" prefHeight="68.0" prefWidth="150.0" text="Get Recipies" />
@@ -32,6 +33,7 @@
                   <CheckBox mnemonicParsing="false" text="Cheese" />
                   <CheckBox mnemonicParsing="false" text="Kale" />
                   <CheckBox mnemonicParsing="false" text="Chicken" />
+                  <CheckBox mnemonicParsing="false" text="rice" />
                </children></VBox>
             <VBox prefHeight="637.0" prefWidth="316.0">
                <children>
