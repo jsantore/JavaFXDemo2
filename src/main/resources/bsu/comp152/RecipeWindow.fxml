@@ -26,7 +26,13 @@
                   <Button mnemonicParsing="false" onAction="#loadData" prefHeight="68.0" prefWidth="150.0" text="Get Recipies" />
                </children>
             </VBox>
-            <VBox prefHeight="637.0" prefWidth="318.0" />
+            <VBox prefHeight="637.0" prefWidth="318.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="Mushrooms" />
+                  <CheckBox mnemonicParsing="false" text="Cheese" />
+                  <CheckBox mnemonicParsing="false" text="Kale" />
+                  <CheckBox mnemonicParsing="false" text="Chicken" />
+               </children></VBox>
             <VBox prefHeight="637.0" prefWidth="316.0">
                <children>
                   <ListView fx:id="ListControl" prefHeight="638.0" prefWidth="316.0" />

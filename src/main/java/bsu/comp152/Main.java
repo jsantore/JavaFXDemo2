@@ -45,7 +45,7 @@ public class Main extends Application {
         }catch (IOException e){
             System.out.println("Couldn't Find FXML file!!!!!!");
         }
-        Scene windowContents = new Scene(root, 300,400);
+        Scene windowContents = new Scene(root, 900,400);
         Stage recipeWindow = new Stage();
         recipeWindow.setScene(windowContents);
         recipeWindow.setTitle("Recipe Finder Demo");
