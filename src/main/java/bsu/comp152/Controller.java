@@ -6,19 +6,25 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+    public CheckBox cheese;
+    public CheckBox kale;
+    public CheckBox chicken;
+    public CheckBox rice;
+    public CheckBox flour;
+    @FXML
+    private CheckBox mushrooms;
     @FXML
     private ListView<DataHandler.recipeDataType> ListControl;
+    private ArrayList<CheckBox> allCheckboxes;
     private DataHandler Model;
     private String dishType;
 
@@ -26,7 +32,7 @@ public class Controller implements Initializable {
         var site = "http://www.recipepuppy.com/api/?";
         var params = getQueryParameters();
         var query = site+params;
-
+        System.out.println(query);
         Model = new DataHandler(query);
         var recipeList = Model.getData();
         ObservableList<DataHandler.recipeDataType> dataToShow = FXCollections.observableArrayList(recipeList);
@@ -40,14 +46,17 @@ public class Controller implements Initializable {
     }
 
     private String getIngredients(){
-        TextInputDialog answer = new TextInputDialog("mushrooms");
-        answer.setHeaderText("Gathering Information");
-        answer.setContentText("What ingredients do you want, you can use multiple ingredients separated by commas");
-        Optional<String> result = answer.showAndWait();
-        if (result.isPresent())
-            return result.get();
-        else
-            return "";
+        var ingredients = "";
+        for (var box : allCheckboxes){
+            if (box.isSelected()){
+                var text = box.getText();
+                if(ingredients.length()>0){
+                    ingredients = ingredients+","+text;
+                }else
+                    ingredients = text;
+            }
+        }
+        return ingredients;
     }
 
     private String getDishType(){
@@ -59,6 +68,13 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         //loadData();
         dishType = "";
+        allCheckboxes = new ArrayList<CheckBox>();
+        allCheckboxes.add(mushrooms);
+        allCheckboxes.add(cheese);
+        allCheckboxes.add(chicken);
+        allCheckboxes.add(kale);
+        allCheckboxes.add(flour);
+        allCheckboxes.add(rice);
         ListControl.getSelectionModel().selectedItemProperty().addListener(
                 new ChangeListener<DataHandler.recipeDataType>() {
                     @Override

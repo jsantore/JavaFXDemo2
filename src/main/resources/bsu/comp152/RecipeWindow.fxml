@@ -22,6 +22,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Vegetable" />
                         <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Cake" />
                         <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Cookie" />
+                        <MenuItem mnemonicParsing="false" onAction="#selectMenuItem" text="Pasta" />
                     </items>
                   </MenuButton>
                   <Button mnemonicParsing="false" onAction="#loadData" prefHeight="68.0" prefWidth="150.0" text="Get Recipies" />
@@ -29,11 +30,12 @@
             </VBox>
             <VBox prefHeight="637.0" prefWidth="318.0">
                <children>
-                  <CheckBox mnemonicParsing="false" text="Mushrooms" />
-                  <CheckBox mnemonicParsing="false" text="Cheese" />
-                  <CheckBox mnemonicParsing="false" text="Kale" />
-                  <CheckBox mnemonicParsing="false" text="Chicken" />
-                  <CheckBox mnemonicParsing="false" text="rice" />
+                  <CheckBox mnemonicParsing="false" text="Mushrooms" fx:id="mushrooms" />
+                  <CheckBox mnemonicParsing="false" text="Cheese" fx:id="cheese"/>
+                  <CheckBox mnemonicParsing="false" text="Kale" fx:id="kale"/>
+                  <CheckBox mnemonicParsing="false" text="Chicken" fx:id="chicken"/>
+                  <CheckBox mnemonicParsing="false" text="rice" fx:id="rice"/>
+                  <CheckBox mnemonicParsing="false" text="flour" fx:id="flour"/>
                </children></VBox>
             <VBox prefHeight="637.0" prefWidth="316.0">
                <children>
