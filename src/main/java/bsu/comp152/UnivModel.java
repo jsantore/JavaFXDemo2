@@ -49,5 +49,10 @@ public class UnivModel {
         @SerializedName("state-province")
         String stateProvince;
         String alpha_two_code;
+
+        @Override
+        public String toString() {
+            return name + " in " + country;
+        }
     }
 }
