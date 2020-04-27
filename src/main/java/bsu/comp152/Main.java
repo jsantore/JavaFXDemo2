@@ -45,6 +45,7 @@ public class Main extends Application {
         }catch (IOException e){
             System.out.println("Couldn't Find FXML file!!!!!!");
         }
+        //here is where we are creating the new window
         Scene windowContents = new Scene(root, 900,400);
         Stage recipeWindow = new Stage();
         recipeWindow.setScene(windowContents);
