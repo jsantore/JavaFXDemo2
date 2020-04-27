@@ -52,4 +52,20 @@ public class Main extends Application {
         recipeWindow.setTitle("Recipe Finder Demo");
         recipeWindow.show();
     }
+
+    @FXML
+    public void openUnivWindow(ActionEvent event){
+        Parent univRoot = null;
+        var loc = getClass().getResource("UnivWindow.fxml");
+        try {
+            univRoot = FXMLLoader.load(loc);
+        }catch (IOException e) {
+            System.out.println("Either couldn't find FXML or there was an exception in the init function");
+        }
+        Scene windowContents = new Scene(univRoot, 400,600);
+        Stage univWindow = new Stage();
+        univWindow.setScene(windowContents);
+        univWindow.setTitle("Universities with Junior in the title");
+        univWindow.show();
+    }
 }

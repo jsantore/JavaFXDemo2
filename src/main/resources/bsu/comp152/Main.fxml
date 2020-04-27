@@ -3,14 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bsu.comp152.Main">
    <children>
       <VBox layoutX="-3.0" layoutY="-3.0" prefHeight="400.0" prefWidth="325.0">
          <children>
             <Button fx:id="ExitButton" mnemonicParsing="false" onAction="#exit" prefHeight="113.0" prefWidth="327.0" text="Quit" />
             <Button fx:id="OpenRecipe" mnemonicParsing="false" onAction="#openRecipeWindow" prefHeight="123.0" prefWidth="327.0" text="Open Recipe Window" />
-            <Button mnemonicParsing="false" prefHeight="163.0" prefWidth="331.0" text="future work" />
+            <Button mnemonicParsing="false" onAction="#openUnivWindow" prefHeight="163.0" prefWidth="331.0" text="Open University Window" />
          </children>
       </VBox>
    </children>
